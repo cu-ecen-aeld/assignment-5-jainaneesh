@@ -3,10 +3,12 @@
 #Author: Siddhant Jajoo.
 
 cd `dirname $0`
+echo -e "Sourcing shared.sh"
 source shared.sh
+echo $?
 mkdir -p base_external/configs/
 make -C buildroot savedefconfig BR2_DEFCONFIG=${AESD_MODIFIED_DEFCONFIG_REL_BUILDROOT}
-
+echo -e "Completed execution of make"
 if [ -e buildroot/.config ] && [ -e buildroot/output/build/linux-*/.config ]; then
 	grep "BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE" buildroot/.config > /dev/null
 	if [ $? -eq 0 ]; then
