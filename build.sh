@@ -9,6 +9,12 @@ git submodule init
 git submodule sync
 git submodule update
 
+echo "*** Debugging Environment Variables ***"
+echo "BR2_EXTERNAL=$EXTERNAL_REL_BUILDROOT"
+read -p "Press any key to continue"
+echo "Current working directory: $(pwd)"
+read -p "Press any key to continue"
+
 set -e 
 cd `dirname $0`
 

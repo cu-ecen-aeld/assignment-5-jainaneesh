@@ -1,3 +1,3 @@
 menu "External options"
-   source "package/aesd-assignments/Config.in"
+   source "../base_external/package/aesd-assignments/Config.in"
 endmenu
