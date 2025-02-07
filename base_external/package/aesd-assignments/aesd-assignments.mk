@@ -5,7 +5,7 @@
 #
 ##############################################################
 #$(error *** Entering aesd-assignments.mk ***)
-$(shell read -n 1 -s -r -p "Paused for debugging. Execution shifted to aesd-assignments.mk Press any key to continue..."; echo)
+#$(shell read -n 1 -s -r -p "Paused for debugging. Execution shifted to aesd-assignments.mk Press any key to continue..."; echo)
 $(info *** Starting aesd-assignments package build ***)
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
 AESD_ASSIGNMENTS_VERSION = ef4c2ba79b917f60addd50b0f23bfafdeb95f548
