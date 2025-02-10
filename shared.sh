@@ -1,7 +1,7 @@
 #!/bin/sh
 # Shared definitions for buildroot scripts
-echo -e "Execution moved to shared.sh"
-read -p "Press any key to continue"
+#echo -e "Execution moved to shared.sh"
+#read -p "Press any key to continue"
 # The defconfig from the buildroot directory we use for qemu builds
 QEMU_DEFCONFIG=configs/qemu_aarch64_virt_defconfig
 # The place we store customizations to the qemu configuration
