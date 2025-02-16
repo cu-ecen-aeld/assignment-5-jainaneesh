@@ -19,8 +19,8 @@ AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 PKG_NAME = aesd-assignments
 define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(info Running build commands for aesd-assignments)
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app all
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/server aesdsocket
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/finder-app all
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/server aesdsocket
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
