@@ -8,7 +8,7 @@
 #$(shell read -n 1 -s -r -p "Paused for debugging. Execution shifted to aesd-assignments.mk Press any key to continue..."; echo)
 $(info *** Starting aesd-assignments package build ***)
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = ef4c2ba79b917f60addd50b0f23bfafdeb95f548
+AESD_ASSIGNMENTS_VERSION = 5ca0a609ddd2f789b5c7e2bc9ff139764abe349c
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -20,7 +20,7 @@ PKG_NAME = aesd-assignments
 define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(info Running build commands for aesd-assignments)
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/finder-app all
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/server aesdsocket
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/server/ aesdsocket
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
