@@ -8,7 +8,7 @@
 #$(shell read -n 1 -s -r -p "Paused for debugging. Execution shifted to aesd-assignments.mk Press any key to continue..."; echo)
 $(info *** Starting aesd-assignments package build ***)
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = c8bd099ca70206ec0e75959f4bb7da9abc1698a1 
+AESD_ASSIGNMENTS_VERSION = af8e35954c848cd47f3af3691a667614f7255735 
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -21,7 +21,6 @@ define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(info Running build commands for aesd-assignments)
 	$(info Using CROSS_COMPILE=$(TARGET_CROSS))
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/finder-app all
-	#$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app all
 	#$(info TARGET_CROSS=$(TARGET_CROSS))
 	#$(info CROSS_COMPILE=$(CROSS_COMPILE))
 	$(info Using again CROSS_COMPILE=$(TARGET_CROSS))
@@ -29,7 +28,6 @@ define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE=$(TARGET_CROSS) -C $(@D)/server aesdsocket
 	$(info file $(@D)/server/aesdsocket)
 	$(info Executed cross compilation of aesdsocket)
-	#$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/server/ aesdsocket
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
