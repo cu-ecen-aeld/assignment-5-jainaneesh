@@ -8,7 +8,7 @@
 #$(shell read -n 1 -s -r -p "Paused for debugging. Execution shifted to aesd-assignments.mk Press any key to continue..."; echo)
 $(info *** Starting aesd-assignments package build ***)
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = 0f89ceff1458d1ed506acfe870a0fb7eb9ca792b 
+AESD_ASSIGNMENTS_VERSION = a1900ec41bb7658301608f7d657f92b942383917 
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
